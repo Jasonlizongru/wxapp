@@ -1,0 +1,15 @@
+<view class="section section_gap">
+<view class="section__title">本次课的同学名单：</view>
+<checkbox-group class="group" bindchange="checkboxChange">
+  <view class="label-1" wx:for="{{checkboxItems}}">
+    <label>
+      <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+      <view class="label-1__icon">
+        <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+      </view>
+      <text class="label-1__text">{{item.value}}</text>
+    </label>
+  </view>
+</checkbox-group>
+</view>
+

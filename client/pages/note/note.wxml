@@ -1,0 +1,11 @@
+<!--pages/note/note.wxml-->
+<view class="container">
+<text class="header">请在此处添加备注：</text>
+<view class="border1">
+
+<input class="notty" bindinput='noteInput'>
+</input>
+<button bindtap='noteSubmit' >点击提交</button>
+<button bindtap='noteSubmitted' >提交结束</button>
+</view>
+</view>
