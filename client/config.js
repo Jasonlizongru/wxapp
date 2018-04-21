@@ -31,10 +31,12 @@ var config = {
         testUrl: `${host}/weapp/test`,
         studentUrl: `${host}/weapp/student`,
 
-        dosignUrl: `${host}/weapp/dosign`
+        dosignUrl: `${host}/weapp/dosign`,
+
+         teachersignUrl: `${host}/weapp/teachersign`,
 
 
-        //updatelistUrl: `${host}/weapp/upadtelist`,
+        showlistUrl: `${host}/weapp/showlist`,
 
         // addstuinfoUrl: `${host}/weapp/addstuinfo`,
         // deletestuUrl: `${host}/weapp/deletestu`

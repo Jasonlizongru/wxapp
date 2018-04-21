@@ -40,8 +40,22 @@ Page({
         duration: 2000
       })
     } else if (
-      (this.data.phone == '1' &&
-      this.data.password == '1')) {
+      (this.data.phone == '20140001' &&
+      this.data.password == '20140001')||
+      (this.data.phone == '20140002' &&
+        this.data.password == '20140002') ||
+      (this.data.phone == '20140003' &&
+        this.data.password == '20140003') ||
+      (this.data.phone == '20140004' &&
+        this.data.password == '20140004') ||
+      (this.data.phone == '20140005' &&
+        this.data.password == '20140005') ||
+      (this.data.phone == '20140006' &&
+        this.data.password == '20140006') ||
+      (this.data.phone == '20140007' &&
+        this.data.password == '20140007') 
+
+      ) {
       // 这里修改成跳转的页面 
       phonesubmit: {
         var that = this
@@ -90,12 +104,12 @@ Page({
       phonesubmit: {
         var that = this
         wx.setStorage({
-          key: 'teaid',
+          key: 'stuid',
           data: this.data,
         }),
           wx.getStorage({
 
-            key: 'teaid',
+            key: 'stuid',
             success: function (res) {
               console.log(res.data.phone)
             },

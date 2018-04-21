@@ -9,22 +9,34 @@
 
 
 
-            <text class="page-body-form-key">经度</text>
+            <text class="page-body-form-key">您所在的经度</text>
             <input class="page-body-form-value" type="text" value="{{location.longitude}}" name="longitude"></input>
 
-            <text class="page-body-form-key">纬度</text>
+            <text class="page-body-form-key">您所在的纬度</text>
             <input class="page-body-form-value" type="text"  value="{{location.latitude}}" name="latitude"></input>
 
 
-            <text class="page-body-form-key">签到发起时间</text>
+            <text class="page-body-form-key">发起签到的时间</text>
             <input class="page-body-form-value" type="text"  value="{{time}}" name="time"></input>
+
+            <!-- <text class="page-body-form-key">填写备注</text>
+            <input class="page-body-form-value" type="text"  placeholder='在此填写备注' bindinput='noteInput' name="notion"></input> -->
+
+             <text class="page-body-form-key">输入您的签到口令</text>
+            <input class="page-body-form-value" type="text"  placeholder='在此填写签到口令' bindinput='classidInput' name="classid"></input> 
             
         </view>
 
         <view class="page-body-buttons">
-          <button class="page-body-button" type="primary"  bindtap="getLocation"  >签到发起位置</button>
-          <button class="page-body-button" type="primary" formType="submit">查看地图</button>
-          <button class="page-body-button" type="primary" bindtap='notion'>发起签到</button>
+          <button class="page-body-button" type="primary"  bindtap="getLocation"  >获取上课地点</button>
+          <button class="page-body-button" type="primary" formType="submit">查看教室位置</button>
+
+          <!-- <button class="page-body-button" type="primary" bindtap='noteSubmit'>提交签到</button> -->
+
+          <button class="page-body-button" type="primary" bindtap='classidSubmit'>提交签到口令</button>
+
+ 
+           <button class="page-body-button" type="primary" bindtap='submit_sign'>创建完成！发起签到！</button> 
          
         </view>
 

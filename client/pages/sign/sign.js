@@ -16,17 +16,21 @@ Page({
     stuid:{},
     position:{},
     time:'',
-    notion:'123',
-    status:0
+    notion:'',
+    status:0,
+    classid:''
   },
+
+  //--------------------------------------------------------//--------------------------------------------------------
   
 
-notion: function(e){
-  wx.reLaunch({
-    url: '../note/note',
-  })
+// notion: function(e){
+//   wx.reLaunch({
+//     url: '../note/note',
+//   })
 
-},
+// },
+
 // getName:function(e){
 //   console.log(e)
 //   var that = this
@@ -170,6 +174,48 @@ notion: function(e){
 
   // }
 
+//------------------------------------------------
+
+  noteInput: function (e) {
+    console.log(e)
+    this.setData({
+      notion: e.detail.value
+    })
+
+  }, noteSubmit: function (e) {
+    var that = this
+    wx.setStorage({
+      key: 'not',
+      data: that.data.notion,
+      success: function (res) {
+        console.log(that.data.notion)
+      },
+    })
+  },
+  //----------------------------------------------
+  classidInput: function (e) {
+    //console.log(e)
+    this.setData({
+      classid: e.detail.value
+    })
+    var clsid=''
+    wx.setStorage({
+      key: clsid,
+      data: e.data.classid,
+    })
+
+  }, classidSubmit: function (e) {
+    var that = this
+    wx.setStorage({
+      key: 'classid',
+      data: that.data.classid,
+      success: function (res) {
+        console.log(that.data.classid)
+      },
+    })
+  },
+
+  //--------------------------------------------
 
   submit_sign:function(){
     var that = this 
@@ -182,7 +228,11 @@ notion: function(e){
         time:that.data.time,
         notion:that.data.notion,
         status:that.data.status,
+        classid:that.data.classid
       }
-    })   
+    }) 
+    wx.reLaunch({
+      url: '../end/end',
+    })  
   }
 })
