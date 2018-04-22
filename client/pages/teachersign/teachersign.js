@@ -198,13 +198,8 @@ Page({
     this.setData({
       classid: e.detail.value
     })
-    var clsid = ''
-    wx.setStorage({
-      key: clsid,
-      data: e.data.classid,
-    })
-
-  }, classidSubmit: function (e) {
+}, 
+    classidSubmit: function (e) {
     var that = this
     wx.setStorage({
       key: 'classid',

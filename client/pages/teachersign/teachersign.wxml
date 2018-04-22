@@ -33,7 +33,7 @@
 
           <!-- <button class="page-body-button" type="primary" bindtap='noteSubmit'>提交签到</button> -->
 
-          <button class="page-body-button" type="primary" bindtap='classidSubmit'>提交签到口令</button>
+          <!-- <button class="page-body-button" type="primary" bindtap='classidSubmit'>提交签到口令</button> -->
 
  
            <button class="page-body-button" type="primary" bindtap='submit_sign'>创建完成！发起签到！</button> 

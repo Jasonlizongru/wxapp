@@ -30,8 +30,10 @@
         <view class="page-body-buttons">
           <button class="page-body-button" type="primary"  bindtap="getLocation"  >获取位置</button>
           <button class="page-body-button" type="primary" formType="submit">查看地图</button>
-          <button class="page-body-button" type="primary" bindtap='noteSubmit'>提交签到</button>
-          <button class="page-body-button" type="primary" bindtap='classidSubmit'>提交口令</button>
+
+
+          <!-- <button class="page-body-button" type="primary" bindtap='noteSubmit'>提交签到</button>
+          <button class="page-body-button" type="primary" bindtap='classidSubmit'>提交口令</button> -->
 
  
            <button class="page-body-button" type="primary" bindtap='submit_sign'>OK！完成签到！</button> 

@@ -13,6 +13,7 @@ Page({
     hasTime: true,
     hasName:true,
     hasNotion:true,
+    hasClassid: true,
     stuid:{},
     position:{},
     time:'',
@@ -194,17 +195,12 @@ Page({
   },
   //----------------------------------------------
   classidInput: function (e) {
-    //console.log(e)
+    console.log(e)
     this.setData({
       classid: e.detail.value
     })
-    var clsid=''
-    wx.setStorage({
-      key: clsid,
-      data: e.data.classid,
-    })
-
-  }, classidSubmit: function (e) {
+}, 
+    classidSubmit: function (e) {
     var that = this
     wx.setStorage({
       key: 'classid',
