@@ -1,41 +1,18 @@
 const { mysql } = require('../qcloud')
 
 module.exports = async ctx => {
-  var that = this
-  console.log(ctx.query)
-  const {
-    stuid,
-    latitude,
-    longitude,
-    time,
-    notion,
-    status,
-    classid } = ctx.query
-
-  const stuinfo = {
-    stuid: stuid,
-    latitude: latitude,
-    longitude: longitude,
-    time: time,
-    notion: notion,
-    status: status,
-    classid: classid
+  var rerr = {
+    stuid: 100,
+    latitude: 100,
+    longitude: 100,
+    time: "2000/01/10 10:00:00",
+    notion: "测试",
+    status: 5
   }
-  // await mysql("stuinfo").insert(stuinfo)
-
-  mysql('stuinfo').count('stuid as hasUser').where({ stuid })
-    .then((res) => {
-      // 如果存在用户则更新
-      if (res[0].hasUser) {
-        console.log("update")
-        return mysql('stuinfo').update(stuinfo).where({ stuid })
-      } else {
-        console.log("insert")
-        return mysql('stuinfo').insert(stuinfo)
-      }
-    })
-    .catch(e => { })
-
-
-  ctx.state.data = "OK"
+  rerr = await mysql("stuinfo").select()
+  console.log(rerr)
+  //var res = await mysql("classinformation").where({ stuid=2 })
+  //console.log(res)
+  // ctx.state.data = "OK"
+  ctx.state.data =rerr
 }

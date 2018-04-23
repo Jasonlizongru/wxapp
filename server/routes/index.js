@@ -23,10 +23,11 @@ router.get('/test', controllers.test)
 router.get('/student', controllers.student)
 router.get('/showlist',controllers.showlist)
 router.get('/updatelist', controllers.updatelist)
-//router.get('/addstuinfo', controllers.addstuinfo)
-//router.get('/deletestu', controllers.deletestu)
 router.get('/dosign',controllers.dosign)
 router.get('/teachersign', controllers.teachersign)
+
+// router.get('/addstuinfo', controllers.addstuinfo)
+//router.get('/deletestu', controllers.deletestu)
 
 
 //------------------------------------------------------------------

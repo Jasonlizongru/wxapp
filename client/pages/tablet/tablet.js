@@ -1,48 +1,78 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//index.js
+//获取应用实例
+var app = getApp()
+var util = require('../../utils/util.js');
+var config = require('../../config');
 
 
 Page({
+
+
   data: {
-    checkboxItems: [
-      { name: 'USA', value: '張三 ： 3.127m', checked: 'true' },
-      { name: 'CHN', value: '張四 ： 3.435m', checked: 'true' },
-      { name: 'BRA', value: '張五 ： 5.983m', checked: 'true'},
-      { name: 'JPN', value: '張六 ： 107.432m   病假',  },
-      { name: 'ENG', value: '張七 ： 4.521m', checked: 'true' },
-      { name: 'TUR', value: '張八 ： 3.634m', checked: 'true'},
-      { name: 'US', value: '張九 ： 3.199m', checked: 'true' },
-      { name: 'CH', value: '張十 ： 5.350m', checked: 'true' },
-      { name: 'BR', value: '張十一 ： 8.902m', checked: 'true' },
-      { name: 'JP', value: '張十二 ： 300.400m    病假', },
-      { name: 'EN', value: '張十三 ： 8.364m', checked: 'true' },
-      { name: 'TU', value: '張十四 ： 9.112m', checked: 'true' }
-      
-    ],
-    hidden: false
+    //默认未获取地址
+    // hasLocation: true,
+    // setTimeout: true,
+    // hasTime: true,
+    // hasName: true,
+    // hasNotion: true,
+    // hasClassid: true,
+    stuid: {},
+    position: {},
+    time: '',
+    notion: '',
+    status: 0,
+    classid: '',
+    objectArray:[]
   },
+  showit:function(e){
+    //console.log(e)
+    var that = this
+    var time = util.formatTime(new Date());
+    wx.request({
+      url: config.service.showlistUrl,
+      data: {
+        stuid: that.data.stuid.phone,
+        latitude: that.data.position.latitude,
+        longitude: that.data.position.longitude,
+        time: that.data.time,
+        notion: that.data.notion,
+        status: that.data.status,
+        classid: that.data.classid
+      },
+      success:function(res){
+        console.log(res)
+
+        that.setData({
+          objectArray:res.data.data
+        })
+
+      }
+    }) 
+
+  },
+
+
+
+
+
+//   data: {
+//     checkboxItems: [
+//       { name: 'USA', value: stuid, checked: 'true' },
+//       { name: 'CHN', value: '張四 ： 3.435m', checked: 'true' },
+//       { name: 'BRA', value: '張五 ： 5.983m', checked: 'true'},
+//       { name: 'JPN', value: '張六 ： 107.432m   病假',  },
+//       { name: 'ENG', value: '張七 ： 4.521m', checked: 'true' },
+//       { name: 'TUR', value: '張八 ： 3.634m', checked: 'true'},
+//       { name: 'US', value: '張九 ： 3.199m', checked: 'true' },
+//       { name: 'CH', value: '張十 ： 5.350m', checked: 'true' },
+//       { name: 'BR', value: '張十一 ： 8.902m', checked: 'true' },
+//       { name: 'JP', value: '張十二 ： 300.400m    病假', },
+//       { name: 'EN', value: '張十三 ： 8.364m', checked: 'true' },
+//       { name: 'TU', value: '張十四 ： 9.112m', checked: 'true' }
+      
+//     ],
+//     hidden: false
+//   },
   checkboxChange: function (e) {
     var checked = e.detail.value
     var changed = {}
