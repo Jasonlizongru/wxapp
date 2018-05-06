@@ -20,10 +20,10 @@ Page({
       url: '../tableta/tableta',
     })
   },
-  tob:function(){
-      wx.reLaunch({
-        url: '../tabletb/tabletb',
-      })
+  tob: function () {
+    wx.reLaunch({
+      url: '../tabletb/tabletb',
+    })
   },
   toc: function () {
     wx.reLaunch({
@@ -40,7 +40,7 @@ Page({
     var that = this
     var time = util.formatTime(new Date());
     wx.request({
-      url: config.service.showaUrl,
+      url: config.service.showcUrl,
       data: {
         stuid: that.data.stuid.phone,
         latitude: that.data.position.latitude,

@@ -37,6 +37,11 @@ var config = {
 
 
         showlistUrl: `${host}/weapp/showlist`,
+        showaUrl: `${host}/weapp/showa`,
+        showbUrl: `${host}/weapp/showb`,
+        showcUrl: `${host}/weapp/showc`,
+        showdUrl: `${host}/weapp/showd`,
+        absentUrl: `${host}/weapp/absent`,
 
         // addstuinfoUrl: `${host}/weapp/addstuinfo`,
         // deletestuUrl: `${host}/weapp/deletestu`

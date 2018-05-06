@@ -11,7 +11,11 @@
     "pages/tablet/tablet",
     "pages/identify/identify",
     "pages/choose/choose",
-    "pages/tableta/tableta"
+    "pages/tableta/tableta",
+    "pages/tabletb/tabletb",
+    "pages/tabletc/tabletc",
+    "pages/tabletd/tabletd",
+    "pages/absent/absent"
 
   ],
   "window":{

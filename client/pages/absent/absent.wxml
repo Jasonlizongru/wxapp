@@ -1,0 +1,20 @@
+<view class="section section_gap">
+<view class="section__title">本学期所有缺席同学记录：</view>
+<button bindtap='showit'>点击显示名单</button>
+<view wx:for="{{objectArray}}" wx:key="key" >
+  {{item.stuid}}
+  {{item.longitude}}
+  {{item.latitude}}
+  {{item.classid}}
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+

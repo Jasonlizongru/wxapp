@@ -38,11 +38,11 @@ Page({
       }
     }) 
     wx.reLaunch({
-      url: '../tableta/tableta',
+      url: '../tabletb/tabletb',
     }) 
 
   } ,
-  quickcheck:function(){
+  quickcheck: function() {
     var that = this
     wx.request({
       url: config.service.dosignUrl,
@@ -55,10 +55,10 @@ Page({
         status: that.data.status,
         classid: that.data.classid
       }
-    }) 
+    })
     wx.reLaunch({
-      url: '../end/end',
-    }) 
+      url: '../absent/absent',
+    })
 
   },
   newsign:function(){

@@ -15,32 +15,12 @@ Page({
     classid: '',
     objectArray: []
   },
-  toa: function () {
-    wx.reLaunch({
-      url: '../tableta/tableta',
-    })
-  },
-  tob:function(){
-      wx.reLaunch({
-        url: '../tabletb/tabletb',
-      })
-  },
-  toc: function () {
-    wx.reLaunch({
-      url: '../tabletc/tabletc',
-    })
-  },
-  tod: function () {
-    wx.reLaunch({
-      url: '../tabletd/tabletd',
-    })
-  },
   showit: function (e) {
     //console.log(e)
     var that = this
     var time = util.formatTime(new Date());
     wx.request({
-      url: config.service.showaUrl,
+      url: config.service.absentUrl,
       data: {
         stuid: that.data.stuid.phone,
         latitude: that.data.position.latitude,

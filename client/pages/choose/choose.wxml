@@ -9,7 +9,7 @@
 
         <view class="page-body-buttons">
           <button class="page-body-button" type="primary"  bindtap="chooseclass"  >选择课程</button>
-          <button class="page-body-button" type="primary" formType="quickcheck">快速查看缺席记录</button>
+          <button class="page-body-button" type="primary" bindtap="quickcheck">快速查看缺席记录</button>
            <button class="page-body-button" type="primary" bindtap='newsign'>发起新签到</button> 
          
         </view>

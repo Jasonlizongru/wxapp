@@ -53,7 +53,63 @@ Page({
       (this.data.phone == '20140006' &&
         this.data.password == '20140006') ||
       (this.data.phone == '20140007' &&
-        this.data.password == '20140007') 
+        this.data.password == '20140007') || 
+        (this.data.phone == '20140008' &&
+          this.data.password == '20140008') ||
+      (this.data.phone == '20140009' &&
+        this.data.password == '20140009') ||
+      (this.data.phone == '20140010' &&
+        this.data.password == '20140010') ||
+      (this.data.phone == '20140011' &&
+        this.data.password == '20140011') ||
+      (this.data.phone == '20140012' &&
+        this.data.password == '20140012') ||
+      (this.data.phone == '20140013' &&
+        this.data.password == '20140013') ||
+      (this.data.phone == '20140014' &&
+        this.data.password == '20140014')||
+      (this.data.phone == '20140015' &&
+        this.data.password == '20140015') ||
+      (this.data.phone == '20140016' &&
+        this.data.password == '20140016') ||
+      (this.data.phone == '20140017' &&
+        this.data.password == '20140017') ||
+      (this.data.phone == '20140018' &&
+        this.data.password == '20140018') ||
+      (this.data.phone == '20140019' &&
+        this.data.password == '20140019') ||
+      (this.data.phone == '20140020' &&
+        this.data.password == '20140020') ||
+      (this.data.phone == '20140021' &&
+        this.data.password == '20140021')||
+      (this.data.phone == '20140022' &&
+        this.data.password == '20140022') ||
+      (this.data.phone == '20140023' &&
+        this.data.password == '20140023') ||
+      (this.data.phone == '20140024' &&
+        this.data.password == '20140024') ||
+      (this.data.phone == '20140025' &&
+        this.data.password == '20140025') ||
+      (this.data.phone == '20140026' &&
+        this.data.password == '20140026') ||
+      (this.data.phone == '20140027' &&
+        this.data.password == '20140027') ||
+      (this.data.phone == '20140028' &&
+        this.data.password == '20140028')||
+      (this.data.phone == '20140020' &&
+        this.data.password == '20140029') ||
+      (this.data.phone == '20140030' &&
+        this.data.password == '20140030') ||
+      (this.data.phone == '20140031' &&
+        this.data.password == '20140031') ||
+      (this.data.phone == '20140032' &&
+        this.data.password == '20140032') ||
+      (this.data.phone == '20140033' &&
+        this.data.password == '20140033') ||
+      (this.data.phone == '20140034' &&
+        this.data.password == '20140034') ||
+      (this.data.phone == '20140035' &&
+        this.data.password == '20140035')   
 
       ) {
       // 这里修改成跳转的页面 

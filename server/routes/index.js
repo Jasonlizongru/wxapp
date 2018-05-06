@@ -26,6 +26,12 @@ router.get('/updatelist', controllers.updatelist)
 router.get('/dosign',controllers.dosign)
 router.get('/teachersign', controllers.teachersign)
 
+router.get('/showa', controllers.showa)
+router.get('/showb', controllers.showb)
+router.get('/showc', controllers.showc)
+router.get('/showd', controllers.showd)
+router.get('/absent', controllers.absent)
+
 // router.get('/addstuinfo', controllers.addstuinfo)
 //router.get('/deletestu', controllers.deletestu)
 
