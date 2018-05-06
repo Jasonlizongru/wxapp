@@ -1,0 +1,42 @@
+<view class="section section_gap">
+<view class="section__title">在选择框选择查看课程</view>
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section__title">本课程的签到同学名单：</view>
+<button bindtap='showit'>点击显示名单</button>
+<view wx:for="{{objectArray}}" >
+  {{item.stuid}}
+  {{item.longitude}}
+  {{item.latitude}}
+  <!-- {{item.time}} -->
+  {{item.classid}}
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- <checkbox-group class="group" bindchange="checkboxChange">
+  <view class="label-1" wx:for="{{checkboxItems}}">
+    <label>
+      <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+      <view class="label-1__icon">
+        <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+      </view>
+      <text class="label-1__text">{{item.value}}</text>
+    </label>
+  </view>
+</checkbox-group>
+</view>
+ -->

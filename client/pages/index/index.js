@@ -14,7 +14,7 @@ Page({
    
     jump:function(){
       wx.reLaunch({
-        url: '../login/login',
+        url: '../identify/identify',
       })
 
       //------------------------------------------------------------------

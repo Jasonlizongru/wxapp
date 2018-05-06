@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="container"> 
+ <view class="login-icon"> 
+
+ </view> 
+<form bindsubmit="relaunch">
+ <view class="login-from"> 
+  
+ <!--按钮-->
+ <view class="loginBtnView"> 
+  <button bindtap="bindViewTap"  class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="logina" >学生登录</button> 
+ </view> 
+ <view class="loginBtnView"> 
+  <button bindtap="bindViewTap"  class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="loginb" >教师登录</button> 
+ </view> 
+ 
+ </view>
+ </form>
+</view>
+

@@ -40,22 +40,10 @@ Page({
         duration: 2000
       })
     } else if (
-      (this.data.phone == '20140001' &&
-      this.data.password == '20140001')||
-      (this.data.phone == '20140002' &&
-        this.data.password == '20140002') ||
-      (this.data.phone == '20140003' &&
-        this.data.password == '20140003') ||
-      (this.data.phone == '20140004' &&
-        this.data.password == '20140004') ||
-      (this.data.phone == '20140005' &&
-        this.data.password == '20140005') ||
-      (this.data.phone == '20140006' &&
-        this.data.password == '20140006') ||
-      (this.data.phone == '20140007' &&
-        this.data.password == '20140007') 
-
-      ) {
+      (this.data.phone == '1' &&
+        this.data.password == '1') || (this.data.phone == '2' &&
+          this.data.password == '2') || (this.data.phone == '3' &&
+            this.data.password == '3')) {
       // 这里修改成跳转的页面 
       phonesubmit: {
         var that = this
@@ -70,13 +58,6 @@ Page({
               console.log(res.data.phone)
             },
           })
-          // wx.request({
-          //   url: '',
-          //   data:{
-          //     stuid:stuid.data.phone
-          //   }
-          // })
-
       }
 
       wx.showToast({
@@ -85,16 +66,8 @@ Page({
         duration: 1000
       }),
         wx.reLaunch({
-          url: '../sign/sign',
+          url: '../choose/choose',
         })
-
-
-        //------------------------------------------------------------------
-        // wx.request({
-        //   url: config.service.updatelistUrl,
-        // })
-        //------------------------------------------------------------------
-
     }
     else {
       wx.showToast({

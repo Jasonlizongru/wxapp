@@ -6,8 +6,13 @@
     "pages/note/note",
     "pages/end/end",
     "pages/login/login",
+    "pages/loginb/loginb",
     "pages/teachersign/teachersign",
-    "pages/tablet/tablet"
+    "pages/tablet/tablet",
+    "pages/identify/identify",
+    "pages/choose/choose",
+    "pages/tableta/tableta"
+
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
