@@ -221,12 +221,12 @@ Page({
         latitude: that.data.position.latitude,
         longitude: that.data.position.longitude,
         time: that.data.time,
-        //notion: that.data.notion,
+        notion: that.data.notion,
         //status: that.data.status,
         classid: that.data.classid
       }
     })
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tablet/tablet',
     })
   }

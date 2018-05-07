@@ -8,13 +8,13 @@ Page({
 
   },
   logina:function(){
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../login/login',
     })
 
   },
   loginb:function(){
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../loginb/loginb',
     })
 

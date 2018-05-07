@@ -5,6 +5,7 @@
   {{item.stuid}}
   {{item.longitude}}
   {{item.latitude}}
+  {{item.notion}}
   {{item.classid}}
 </view>
 </view>

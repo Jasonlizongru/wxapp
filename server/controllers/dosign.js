@@ -21,20 +21,20 @@ module.exports = async ctx => {
     status: status,
     classid:classid
   }
-  // await mysql("stuinfo").insert(stuinfo)
+   await mysql("stuinfo").insert(stuinfo)
 
-  mysql('stuinfo').count('stuid as hasUser').where({stuid})
-    .then((res) => {
-      // 如果存在用户则更新
-      if (res[0].hasUser) {
-        console.log("update")
-        return mysql('stuinfo').update(stuinfo).where({stuid})
-      } else {
-        console.log("insert")
-        return mysql('stuinfo').insert(stuinfo)
-      }
-    })
-    .catch(e => {})
+  // mysql('stuinfo').count('stuid as hasUser').where({stuid})
+  //   .then((res) => {
+  //     // 如果存在用户则更新
+  //     if (res[0].hasUser) {
+  //       console.log("update")
+  //       return mysql('stuinfo').update(stuinfo).where({stuid})
+  //     } else {
+  //       console.log("insert")
+  //       return mysql('stuinfo').insert(stuinfo)
+  //     }
+  //   })
+  //   .catch(e => {})
 
 
   ctx.state.data = "OK"

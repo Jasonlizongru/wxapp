@@ -30,7 +30,7 @@ Page({
     })
   },
   noteSubmitted:function(e){
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../end/end',
     })
   },

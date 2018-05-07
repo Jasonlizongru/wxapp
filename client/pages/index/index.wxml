@@ -8,6 +8,13 @@
             background-size="cover"
         ></image>
         <view>
+
+
+
+
+
+
+        
             <text class="userinfo-nickname">{{logged ? userInfo.nickName : '使用微信登录程序'}}</text>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
         </view>

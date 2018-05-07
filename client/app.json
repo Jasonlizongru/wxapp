@@ -15,7 +15,9 @@
     "pages/tabletb/tabletb",
     "pages/tabletc/tabletc",
     "pages/tabletd/tabletd",
-    "pages/absent/absent"
+    "pages/absent/absent",
+    "pages/counter/counter"
+
 
   ],
   "window":{

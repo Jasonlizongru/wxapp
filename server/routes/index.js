@@ -32,6 +32,8 @@ router.get('/showc', controllers.showc)
 router.get('/showd', controllers.showd)
 router.get('/absent', controllers.absent)
 
+router.get('/counter', controllers.counter)
+
 // router.get('/addstuinfo', controllers.addstuinfo)
 //router.get('/deletestu', controllers.deletestu)
 

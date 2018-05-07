@@ -227,7 +227,7 @@ Page({
         classid:that.data.classid
       }
     }) 
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../end/end',
     })  
   }

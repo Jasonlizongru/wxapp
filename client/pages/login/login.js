@@ -140,7 +140,7 @@ Page({
         icon: 'success',
         duration: 1000
       }),
-        wx.reLaunch({
+        wx.navigateTo({
           url: '../sign/sign',
         })
 
