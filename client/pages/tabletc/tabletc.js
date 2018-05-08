@@ -16,22 +16,22 @@ Page({
     objectArray: []
   },
   toa: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tableta/tableta',
     })
   },
   tob: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tabletb/tabletb',
     })
   },
   toc: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tabletc/tabletc',
     })
   },
   tod: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tabletd/tabletd',
     })
   },

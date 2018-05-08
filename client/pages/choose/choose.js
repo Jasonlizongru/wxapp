@@ -38,7 +38,7 @@ Page({
       }
     }) 
     wx.navigateTo({
-      url: '../tabletb/tabletb',
+      url: '../tableta/tableta',
     }) 
 
   } ,

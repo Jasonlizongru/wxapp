@@ -1,8 +1,9 @@
 <view class="section section_gap">
-<view class="section__title">在选择框选择单个学生进行查看</view>
+<view class="section__title">输入您想查询的课程名称：</view>
 <view class="section">
-<input class = "studentid" placeholder='输入想查询的学号' bindinput='selectstu'></input>
+
 </view>
+<input class = "studentid" placeholder='输入想查询的学号' bindinput='selectstu'></input>
 <view class="section__title">本同学的签到历史时：</view>
 <button bindtap='showit'>点击显示名单</button>
 <view wx:for="{{objectArray}}" wx:key="key" >
@@ -12,6 +13,7 @@
   <!-- {{item.time}} -->
   {{item.notion}}
   {{item.classid}}
+  {{item.name}}
 </view>
 </view>
 

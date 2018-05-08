@@ -15,23 +15,35 @@ Page({
     classid: '',
     objectArray: []
   },
+
+  selectstu: function (e) {
+    this.setData({
+      selected: e.detail.value
+    })
+    wx.setStorage({
+      key: 'selectted',
+      data: e.detail.value,
+    })
+  },
+
+
   toa: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tableta/tableta',
     })
   },
   tob:function(){
-      wx.reLaunch({
+    wx.navigateTo({
         url: '../tabletb/tabletb',
       })
   },
   toc: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tabletc/tabletc',
     })
   },
   tod: function () {
-    wx.reLaunch({
+    wx.navigateTo({
       url: '../tabletd/tabletd',
     })
   },
@@ -48,7 +60,8 @@ Page({
         time: that.data.time,
         notion: that.data.notion,
         status: that.data.status,
-        classid: that.data.classid
+        classid: that.data.classid,
+        selected: that.data.selected
       },
       success: function (res) {
         //console.log(res)
