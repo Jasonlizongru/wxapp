@@ -16,44 +16,13 @@ Page({
     stuid: {},
     position: {},
     time: '',
+//thecode :生成动态时间戳做为签到的id，与classname绑定
+    thecode:'',
+
     notion: '',
     status: 0,
     classid: ''
   },
-
-  //--------------------------------------------------------//--------------------------------------------------------
-
-
-  // notion: function(e){
-  //   wx.reLaunch({
-  //     url: '../note/note',
-  //   })
-
-  // },
-
-  // getName:function(e){
-  //   console.log(e)
-  //   var that = this
-  //   wx.getUserInfo({
-  //     success:function(res){
-  //       console.log(res)
-  //       wx.setStorage({
-  //         key: 'stuId',
-  //         data: res,
-  //       })
-  //       wx.getStorage({
-  //         key: 'stuId',
-  //         success: function(res) {
-  //           console.log(res)
-  //           console.log(res.unionid)
-  //         },
-  //       })
-  //     }
-  //   })
-  // },
-
-
-
   //获取经纬度
   getLocation: function (e) {
     console.log(e)
@@ -65,6 +34,11 @@ Page({
     that.setData({
       time: time
     });
+    var thecode = Date.parse(new Date());
+    thecode = thecode/1000;
+    that.setData({
+      thecode:thecode
+    })
 
 
 
@@ -72,30 +46,6 @@ Page({
       key: 'time',
       data: time,
     })
-
-    // wx.getUserInfo({
-    //   success:function(res){
-    //     wx.setStorage({
-    //       key:'position',
-    //       data:res,
-    //     })
-    //     wx.getStorage({
-    //       key: 'position',
-    //       success: function(res) {
-    //         console.log(res.data.rawData)
-    //       },
-
-    //     })
-    //     that.setData({
-    //       hasName: true,
-    //       hasTime: false,
-    //       Name: {
-    //         student:res.data,
-    //       }
-    //     })
-    //   }
-    // })
-
     wx.getLocation({
       success: function (res) {
         that.setData({
@@ -151,31 +101,6 @@ Page({
 
     })
   },
-  // getInfo:function(){
-  // wx.getUserInfo({
-  //   withCredentials: true,
-  //   lang: '',
-  //   success: function(res) {
-  //     var userInfo = res.userInfo
-  //     var nickName = userInfo.nickName
-  //     var avatarUrl = userInfo.avatarUrl
-  //   },
-  // })
-  // wx.setStorage({
-  //   key: 'stucode',
-  //   data: res,
-  // })
-  // wx.getStorage({
-  //   key: 'stucode',
-  //   success: function(res) {
-  //     console.log(stucode.userInfo)
-  //   },
-  // })
-
-  // }
-
-  //------------------------------------------------
-
   noteInput: function (e) {
     console.log(e)
     this.setData({
@@ -197,6 +122,9 @@ Page({
     //console.log(e)
     this.setData({
       classid: e.detail.value
+    })
+    this.setData({
+      selected: e.detail.value
     })
 }, 
     classidSubmit: function (e) {
@@ -223,7 +151,8 @@ Page({
         time: that.data.time,
         notion: that.data.notion,
         //status: that.data.status,
-        classid: that.data.classid
+        classid: that.data.classid,
+        thecode:that.data.thecode
       }
     })
     wx.navigateTo({

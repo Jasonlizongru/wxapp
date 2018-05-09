@@ -22,7 +22,8 @@ Page({
     notion: '',
     status: 0,
     classid: '',
-    objectArray:[]
+    objectArray:[],
+    selected:{}
   },
   showit:function(e){
     //console.log(e)
@@ -37,7 +38,8 @@ Page({
         time: that.data.time,
         notion: that.data.notion,
         status: that.data.status,
-        classid: that.data.classid
+        classid: that.data.classid,
+        selected:that.data.selected
       },
       success:function(res){
         console.log(res)

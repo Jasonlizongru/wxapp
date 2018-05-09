@@ -22,8 +22,11 @@
             <!-- <text class="page-body-form-key">填写备注</text>
             <input class="page-body-form-value" type="text"  placeholder='在此填写备注' bindinput='noteInput' name="notion"></input> -->
 
-             <text class="page-body-form-key">输入您的签到口令</text>
-            <input class="page-body-form-value" type="text"  placeholder='在此填写签到口令' bindinput='classidInput' name="classid"></input> 
+             <text class="page-body-form-key">输入您的课程名</text>
+            <input class="page-body-form-value" type="text"  placeholder='在此填写课程名' bindinput='classidInput' name="classid"></input> 
+
+             <text class="page-body-form-key">动态生成您的签到口令</text>
+            <input class="page-body-form-value"  placeholder='获取签到口令'type="text"  value="{{thecode}}" name="thecode" ></input>
             
         </view>
 

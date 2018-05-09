@@ -17,6 +17,6 @@ module.exports = async ctx => {
     selected } = ctx.query
 
 
-  rerr = await mysql("stuinfo").where({ classid: selected }).select()
+  rerr = await mysql("classinformation").where({ classid: selected }).select()
   ctx.state.data = rerr
 }

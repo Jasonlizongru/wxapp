@@ -1,14 +1,16 @@
-<view class="section section_gap">
+<!-- <view class="section section_gap">
 <view class="section__title">本次课的签到同学名单：</view>
 <button bindtap='showit'>点击显示名单</button>
 <view wx:for="{{objectArray}}" >
   {{item.stuid}}
   {{item.longitude}}
   {{item.latitude}}
-  <!-- {{item.time}} -->
+  <!-- {{item.time}} 
   {{item.classid}}
 </view>
-</view>
+</view> -->
+
+<view>签到已经发起，你可以返回课程选择页面查看当前签到</view>
 
 
 

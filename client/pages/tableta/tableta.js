@@ -13,7 +13,8 @@ Page({
     notion: '',
     status: 0,
     classid: '',
-    objectArray: []
+    objectArray: [],
+    selected:{}
   },
 
   selectstu: function (e) {
@@ -26,27 +27,12 @@ Page({
     })
   },
 
-
-  toa: function () {
-    wx.navigateTo({
-      url: '../tableta/tableta',
-    })
-  },
-  tob:function(){
-    wx.navigateTo({
-        url: '../tabletb/tabletb',
-      })
-  },
-  toc: function () {
+  choosecode: function () {
     wx.navigateTo({
       url: '../tabletc/tabletc',
     })
   },
-  tod: function () {
-    wx.navigateTo({
-      url: '../tabletd/tabletd',
-    })
-  },
+
   showit: function (e) {
     //console.log(e)
     var that = this

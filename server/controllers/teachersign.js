@@ -8,9 +8,8 @@ module.exports = async ctx => {
     latitude,
     longitude,
     time,
-    //notion,
-    //status,
-    classid } = ctx.query
+    classid,
+    thecode } = ctx.query
 
   const classinformation = {
     stuid: stuid,
@@ -19,22 +18,23 @@ module.exports = async ctx => {
     time: time,
     //notion: notion,
     //status: status,
-    classid: classid
+    classid: classid,
+    thecode:thecode
   }
-  // await mysql("classinformation").insert(classinformation)
+  await mysql("classinformation").insert(classinformation)
 
-  mysql('classinformation').count('stuid as hasUser').where({ stuid })
-    .then((res) => {
-      // 如果存在用户则更新
-      if (res[0].hasUser) {
-        console.log("update")
-        return mysql('classinformation').update(classinformation).where({ stuid })
-      } else {
-        console.log("insert")
-        return mysql('classinformation').insert(classinformation)
-      }
-    })
-    .catch(e => { })
+  // mysql('classinformation').count('stuid as hasUser').where({ stuid })
+  //   .then((res) => {
+  //     // 如果存在用户则更新
+  //     if (res[0].hasUser) {
+  //       console.log("update")
+  //       return mysql('classinformation').update(classinformation).where({ stuid })
+  //     } else {
+  //       console.log("insert")
+  //       return mysql('classinformation').insert(classinformation)
+  //     }
+  //   })
+  //   .catch(e => { })
 
 
   ctx.state.data = "OK"

@@ -7,6 +7,11 @@ var config = require('../../config');
 
 Page({
   data: {
+    //selected字段，保存输入的学生学号
+    selected: {},
+    name: {},
+    sex: {},
+
     stuid: {},
     position: {},
     time: '',
@@ -15,26 +20,18 @@ Page({
     classid: '',
     objectArray: []
   },
-  toa: function () {
-    wx.navigateTo({
-      url: '../tableta/tableta',
+  selectstu: function (e) {
+    this.setData({
+      selected: e.detail.value
+    })
+    wx.setStorage({
+      key: 'selectted',
+      data: e.detail.value,
     })
   },
-  tob: function () {
-    wx.navigateTo({
-      url: '../tabletb/tabletb',
-    })
-  },
-  toc: function () {
-    wx.navigateTo({
-      url: '../tabletc/tabletc',
-    })
-  },
-  tod: function () {
-    wx.navigateTo({
-      url: '../tabletd/tabletd',
-    })
-  },
+
+
+
   showit: function (e) {
     //console.log(e)
     var that = this
@@ -48,10 +45,14 @@ Page({
         time: that.data.time,
         notion: that.data.notion,
         status: that.data.status,
-        classid: that.data.classid
+        classid: that.data.classid,
+        selected: that.data.selected,
+        name: that.data.name,
+        sex: that.data.sex
+
       },
       success: function (res) {
-        //console.log(res)
+        console.log(res)
 
         that.setData({
           objectArray: res.data.data

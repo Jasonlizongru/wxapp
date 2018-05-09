@@ -1,10 +1,6 @@
 <view class="section section_gap">
-<view class="section__title">在选择框选择查看课程</view>
 <view class="section">
-<button class="a" bindtap='toa'>计算机网络</button>
-<button class="a" bindtap='tob'>编译原理</button>
-<button class="a" bindtap='toc'>离散数学</button>
-<button class="a" bindtap='tod'>线性代数</button>
+
 
 </view>
 <view class="section__title">本课程的签到同学名单：</view>
@@ -13,7 +9,9 @@
   {{item.stuid}}
   {{item.longitude}}
   {{item.latitude}}
-  {{item.classid}}
+  {{item.notion}}
+
+  
 </view>
 </view>
 

@@ -4,29 +4,25 @@
 <view class="section__title">在输入框选择查看课程</view>
 <view class="section">
 <input class = "studentid" placeholder='输入想查询的课程' bindinput='selectstu'></input>
-<!-- <button class="a" bindtap='toa'>计算机网络</button>
-<button class="a" bindtap='tob'>编译原理</button>
-<button class="a" bindtap='toc'>离散数学</button>
-<button class="a" bindtap='tod'>线性代数</button> -->
-
 </view>
-<view class="section__title">本课程的签到同学名单：</view>
-<button bindtap='showit'>点击显示名单</button>
+
+<view class="section__title">本课程的动态口令列表：</view>
+<button bindtap='showit'>点击获取签到口令</button>
 <view wx:for="{{objectArray}}" wx:key="key" >
   {{item.stuid}}
-  {{item.longitude}}
-  {{item.latitude}}
   {{item.classid}}
+  {{item.thecode}}
 </view>
 </view>
 
 
+<button class="page-body-button" bindtap='choosecode' value ="{{item.thecode}}">点击使用口令</button>
 
 
 
 
-
-
+<!-- 
+<button class="page-body-button" bindtap='choosecode' value ="{{item.thecode}}">点击查看本次记录</button> -->
 
 
 <!-- <checkbox-group class="group" bindchange="checkboxChange">

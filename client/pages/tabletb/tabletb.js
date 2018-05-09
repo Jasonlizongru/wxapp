@@ -13,28 +13,9 @@ Page({
     notion: '',
     status: 0,
     classid: '',
-    objectArray: []
+    objectArray: [],
   },
-  toa: function () {
-    wx.navigateTo({
-      url: '../tableta/tableta',
-    })
-  },
-  tob: function () {
-    wx.navigateTo({
-      url: '../tabletb/tabletb',
-    })
-  },
-  toc: function () {
-    wx.navigateTo({
-      url: '../tabletc/tabletc',
-    })
-  },
-  tod: function () {
-    wx.navigateTo({
-      url: '../tabletd/tabletd',
-    })
-  },
+ 
   showit: function (e) {
     //console.log(e)
     var that = this
