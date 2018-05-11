@@ -11,6 +11,7 @@
           <button class="page-body-button" type="primary"  bindtap="chooseclass"  >选择课程</button>
           <button class="page-body-button" type="primary" bindtap="quickcheck">快速查看缺席记录</button>
            <button class="page-body-button" type="primary" bindtap='tocounter'>快速查看单个学生</button> 
+           <button class="page-body-button" type="primary" bindtap='todetail'>查询学生详细信息</button> 
            <button class="page-body-button" type="primary" bindtap='newsign'>发起新签到</button> 
          
         </view>

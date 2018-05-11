@@ -43,8 +43,7 @@ var config = {
         showdUrl: `${host}/weapp/showd`,
         absentUrl: `${host}/weapp/absent`,
         counterUrl: `${host}/weapp/counter`,
-
-        // addstuinfoUrl: `${host}/weapp/addstuinfo`,
+        detailUrl: `${host}/weapp/detail`,
         // deletestuUrl: `${host}/weapp/deletestu`
 
         //------------------------------------------------------

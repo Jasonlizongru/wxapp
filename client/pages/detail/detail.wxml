@@ -1,0 +1,38 @@
+<view class="section section_gap">
+<view class="section__title">输入您想查询的学生姓名：</view>
+<view class="section">
+
+</view>
+<input class = "studentid" placeholder='输入想查询的学号' bindinput='selectstu'></input>
+<view class="section__title">本同学的详细信息是</view>
+<button bindtap='showit'>点击显示</button>
+<view wx:for="{{objectArray}}" wx:key="key" >
+  {{item.classgroup}}
+  {{item.stuid}}
+  {{item.name}}
+  {{item.sex}}
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- <checkbox-group class="group" bindchange="checkboxChange">
+  <view class="label-1" wx:for="{{checkboxItems}}">
+    <label>
+      <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+      <view class="label-1__icon">
+        <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+      </view>
+      <text class="label-1__text">{{item.value}}</text>
+    </label>
+  </view>
+</checkbox-group>
+</view>
+ -->

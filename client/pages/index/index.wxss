@@ -5,7 +5,14 @@ page {
     flex-direction: column;
     justify-content: flex-start;
 }
+.textqqq{
+    width: 100%;
+    line-height: 52px;
+    font-size: 34rpx;
+    color: #007AFF;
+    align-items: center
 
+}
 .userinfo, .uploader, .tunnel {
     margin-top: 40rpx;
     height: 140rpx;

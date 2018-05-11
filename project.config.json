@@ -12,5 +12,6 @@
 	},
 	"appid": "wxc7bf3a5dce6df42d",
 	"projectname": "wxapp",
+	"compileType": "miniprogram",
 	"condition": {}
 }

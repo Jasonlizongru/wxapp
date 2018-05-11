@@ -1,6 +1,11 @@
-<!--index.wxml-->
-<view class="container">
-    <!-- 用户登录测试 -->
+
+<image src = "./timg.jpg" mode = widthfix></image>
+
+<view class="tunnel-text">
+<button bindtap="jump">进入签到程序 </button>
+</view>  
+<!-- <view class="container">
+  
     <view class="userinfo" bindtap="login">
         <image
             class="userinfo-avatar"
@@ -8,17 +13,11 @@
             background-size="cover"
         ></image>
         <view>
-
-
-
-
-
-
-        
             <text class="userinfo-nickname">{{logged ? userInfo.nickName : '使用微信登录程序'}}</text>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
         </view>
     </view>
+</view> -->
 
      <!-- 信道连接测试 
     <view class="tunnel">
@@ -65,10 +64,4 @@
     </view> -->
 
 
-    <view class="tunnel-text">
-<button bindtap="jump">进入签到程序 </button>
-</view>  
 
-
-
-</view>

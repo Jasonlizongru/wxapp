@@ -89,6 +89,26 @@ Page({
     })
 
   },
+  todetail: function () {
+    var that = this
+    wx.request({
+      url: config.service.dosignUrl,
+      data: {
+        stuid: that.data.stuid.phone,
+        latitude: that.data.position.latitude,
+        longitude: that.data.position.longitude,
+        time: that.data.time,
+        notion: that.data.notion,
+        status: that.data.status,
+        classid: that.data.classid
+      }
+    })
+    wx.navigateTo({
+      url: '../detail/detail',
+    })
+
+  },
+
 
 
   //--------------------------------------------

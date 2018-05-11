@@ -16,7 +16,8 @@
     "pages/tabletc/tabletc",
     "pages/tabletd/tabletd",
     "pages/absent/absent",
-    "pages/counter/counter"
+    "pages/counter/counter",
+    "pages/detail/detail"
 
 
   ],
