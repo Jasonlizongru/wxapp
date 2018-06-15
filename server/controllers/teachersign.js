@@ -2,7 +2,7 @@ const { mysql } = require('../qcloud')
 
 module.exports = async ctx => {
   var that = this
-  console.log(ctx.query)
+  
   const {
     stuid,
     latitude,

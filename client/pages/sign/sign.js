@@ -21,82 +21,19 @@ Page({
     status:0,
     classid:''
   },
-
-  //--------------------------------------------------------//--------------------------------------------------------
-  
-
-// notion: function(e){
-//   wx.reLaunch({
-//     url: '../note/note',
-//   })
-
-// },
-
-// getName:function(e){
-//   console.log(e)
-//   var that = this
-//   wx.getUserInfo({
-//     success:function(res){
-//       console.log(res)
-//       wx.setStorage({
-//         key: 'stuId',
-//         data: res,
-//       })
-//       wx.getStorage({
-//         key: 'stuId',
-//         success: function(res) {
-//           console.log(res)
-//           console.log(res.unionid)
-//         },
-//       })
-//     }
-//   })
-// },
-  
-
-
   //获取经纬度
   getLocation: function (e) {
     console.log(e)
     var that = this
-
     var time = util.formatTime(new Date());
     // 再通过setData更改Page()里面的data，动态更新页面的数据  
-
     that.setData({
       time: time
     });
-
-
-
     wx.setStorage({
       key: 'time',
       data: time,
     })
-
-    // wx.getUserInfo({
-    //   success:function(res){
-    //     wx.setStorage({
-    //       key:'position',
-    //       data:res,
-    //     })
-    //     wx.getStorage({
-    //       key: 'position',
-    //       success: function(res) {
-    //         console.log(res.data.rawData)
-    //       },
-          
-    //     })
-    //     that.setData({
-    //       hasName: true,
-    //       hasTime: false,
-    //       Name: {
-    //         student:res.data,
-    //       }
-    //     })
-    //   }
-    // })
-
     wx.getLocation({
       success: function (res) {
         that.setData({
